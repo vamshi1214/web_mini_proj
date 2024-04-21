@@ -103,7 +103,7 @@ h1 {
 /* Logout button */
 .logout-button {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
   padding: 10px 20px;
   background-color: var(--primary-color);
