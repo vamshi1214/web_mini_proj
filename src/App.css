@@ -1,0 +1,182 @@
+/* Gradient color variables */
+:root {
+  --primary-color: #2d4059; /* Dark blue */
+  --secondary-color: #ea5455; /* Red */
+  --gradient-start: #4ecdc4; /* Turquoise */
+  --gradient-end: #556270; /* Dark grayish blue */
+}
+
+/* General styling */
+.App {
+  text-align: center;
+  background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end)); /* Gradient background */
+}
+
+body {
+  font-family: 'Space Mono', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+/* Search bar */
+.search-bar input {
+  padding: 12px;
+  margin-top: 20px;
+  width: 70%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Product containers */
+.rbord,
+.rbord-pro {
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display three columns */
+  gap: 20px;
+  justify-items: center; /* Center items horizontally */
+  align-items: start; /* Align items to the top */
+}
+
+/* Product cards */
+.product-card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+  color: #333;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Product details */
+.product-image-home {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  border-radius: 15px 15px 0 0;
+}
+
+.product-title-home {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.product-price-home {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.product-description {
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.product-rating {
+  color: #f07b3f;
+  margin-bottom: 10px;
+}
+
+/* Logout button */
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Login and register containers */
+.login-container,
+.register-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end)); /* Gradient background */
+}
+
+.login-container h1,
+.register-container h1 {
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+/* Input fields */
+.login-container input,
+.register-container input {
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-family: 'Space Mono', sans-serif;
+}
+
+.login-container input:focus,
+.register-container input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Buttons */
+.login-container button,
+.register-container button {
+  padding: 15px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Space Mono', sans-serif;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+  background-color: #1d2c40;
+}
+
+/* Form labels */
+.form-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+
+/* Auth container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
